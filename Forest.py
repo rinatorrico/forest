@@ -51,13 +51,13 @@ score = modelo.score(x_test, y_test)
 
 st.subheader(f"Precision del modelo: {score: .2f}")
 
-#Matriz de confusion
+# Matriz de confusion
 y_pred = modelo.predict(x_test)
 mc = confusion_matrix(y_test, y_pred)
-st.subheader("Matriz de Confusion")
+st.subheader('Matriz de Confusión')
 fig, ax = plt.subplots()
 
-sns.heatmap(mc,annot=True, fmt="d", cmap="blues", ax=ax )
+sns.heatmap(mc, annot=True, fmt='d', cmap='Blues', ax=ax )
 st.pyplot(fig)
 
 
